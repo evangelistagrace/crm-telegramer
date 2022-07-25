@@ -1,8 +1,16 @@
 const axios = require("axios").default;
+const Slimbot = require('slimbot');
+const slimbot = new Slimbot(process.env.TELEGRAM_BOT_TOKEN);
 
 // Docs on event and context https://www.netlify.com/docs/functions/#the-handler-method
 exports.handler = async (event, context) => {
   try {
+      console.log(event.body.message)
+      res.status(204).send()
+      console.log('success')
+      slimbot.sendMessage(process.env.TELEGRAM_CHAT_ID, 'Someone just starred your repo');
+
+    /*
     const body = JSON.parse(event.body);
     const username = body.sender.login;
     const avatarUrl = body.sender.avatar_url;
@@ -18,6 +26,7 @@ exports.handler = async (event, context) => {
       ],
     });
     console.log("Submitted!");
+    */
     return {
       statusCode: 204,
     };
