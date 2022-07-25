@@ -17,9 +17,6 @@ exports.handler = async (event, context) => {
         text: 'hello back 👋'
     })
     .then((response) => { 
-      return {
-        statusCode: 204,
-      }
     })
     /*
     const body = JSON.parse(event.body);
@@ -38,9 +35,9 @@ exports.handler = async (event, context) => {
     });
     console.log("Submitted!");
     */
-    // return {
-    //   statusCode: 204,
-    // };
+    return {
+      statusCode: 204,
+    };
   } catch (err) {
     return { statusCode: 500, body: err.toString() };
   }
