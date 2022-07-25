@@ -14,9 +14,11 @@ exports.handler = async (event, context) => {
 
     const res = await axios.post(`${url}${process.env.TELEGRAM_BOT_TOKEN}/sendMessage`,{
         chat_id: process.env.TELEGRAM_CHAT_ID,
-        text: 'hello back 👋'
+        text: 'New ticket'
     })
-    .then((response) => { 
+    .then((response) => {
+      let date = new Date()
+        console.log("process executed at ", date) 
     })
     /*
     const body = JSON.parse(event.body);
@@ -37,6 +39,7 @@ exports.handler = async (event, context) => {
     */
     return {
       statusCode: 204,
+      statusText: "OK"
     };
   } catch (err) {
     return { statusCode: 500, body: err.toString() };
