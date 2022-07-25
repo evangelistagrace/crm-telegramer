@@ -6,7 +6,6 @@ const slimbot = new Slimbot(process.env.TELEGRAM_BOT_TOKEN);
 exports.handler = async (event, context) => {
   try {
       console.log(event.body.message)
-      res.status(204).send()
       console.log('success')
       slimbot.sendMessage(process.env.TELEGRAM_CHAT_ID, 'Someone just starred your repo');
 
