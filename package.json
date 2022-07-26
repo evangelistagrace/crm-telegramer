@@ -1,7 +1,7 @@
 {
   "name": "netlify-discorder",
   "version": "1.0.0",
-  "description": "This serverless function sends a Discord message when a defined Github repo is starred.",
+  "description": "This serverless function sends a Telegram message when a ticket is submitted via MMU CRM.",
   "main": "index.js",
   "scripts": {
     "push": "git add . && git commit -m \"commit\" && git push",
@@ -12,7 +12,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.21.1",
-    "slimbot": "^5.1.0"
+    "axios": "^0.21.1"
   }
 }

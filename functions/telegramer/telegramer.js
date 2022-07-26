@@ -1,6 +1,4 @@
 const axios = require("axios").default;
-const Slimbot = require('slimbot');
-const slimbot = new Slimbot(process.env.TELEGRAM_BOT_TOKEN);
 
 const url = 'https://api.telegram.org/bot';
 // Docs on event and context https://www.netlify.com/docs/functions/#the-handler-method
