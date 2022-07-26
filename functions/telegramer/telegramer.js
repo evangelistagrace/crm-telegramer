@@ -6,7 +6,7 @@ const url = 'https://api.telegram.org/bot';
 // Docs on event and context https://www.netlify.com/docs/functions/#the-handler-method
 exports.handler = async (event, context) => {
   try {
-    console.log("EVENT: \n" + JSON.stringify(event, null, 2))
+    console.log("message: ", event.body)
     /*
       console.log(event.body.message)
       console.log('success')
