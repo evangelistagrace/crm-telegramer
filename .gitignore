@@ -115,3 +115,6 @@ dist
 
 # Keep netlify settings private and encourage creation on deploy
 .netlify
+
+
+*.txt
