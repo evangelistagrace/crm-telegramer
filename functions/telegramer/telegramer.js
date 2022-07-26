@@ -12,10 +12,11 @@ exports.handler = async (event, context) => {
       console.log('success')
       slimbot.sendMessage(process.env.TELEGRAM_CHAT_ID, 'Someone just starred your repo');
 */
+    let {case_id, case_category, case_type} = event.body
 
     const res = await axios.post(`${url}${process.env.TELEGRAM_BOT_TOKEN}/sendMessage`,{
         chat_id: process.env.TELEGRAM_CHAT_ID,
-        text: 'New ticket'
+        text: `Case#${case_id}: \nCategory: ${case_category}`
     })
     .then((response) => {
       let date = new Date()
